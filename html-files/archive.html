@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISSUE VIEW</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!--Top Navigations -->
+    <div class="container-fluid navigation" id="mainNav">
+
+
+      <div class="row d-flex justify-content-between align-items-center">
+         <div class="col d-flex justify-content-start align-items-center">
+            
+
+             <a class="btn d-block d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                 <i class="bi bi-list text-primary"></i>
+               </a>
+
+             <form class="d-flex search d-none d-lg-inline-flex" role="search" id="searchField" action="searchresult.html">
+               <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search"> -->
+               <input class="form-control" type="search" name="search" placeholder="Search" aria-label="Search" id="search_input">
+               <button class="btn btn-outline-primary ms-1" type="submit" id="search_button" disabled><i class="bi bi-search"></i></button>
+             </form>
+ 
+           </div>
+
+           <div class="col text-center">
+             <a class="navbar-brand" href="/index.html">The Pillar</a>
+           </div>
+
+
+           <!-- Button trigger modal -->
+           <div class="col d-flex justify-content-end align-items-center" id="profile-btn-div">
+             <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn" title="Login account">
+               <i class="bi bi-person-fill text-primary"></i>
+             </button>
+           </div>
+         </div>
+    </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade glassmorphism" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close_modal"></button>
+              </div>
+              <div class="modal-body">
+               
+                <form action="" class="" id="log-in-form">
+      
+                  <div class="form-header text-center">
+                    <img src="/img/The Pillar Logo.png" class="w-25" alt="">
+                    <h2 class="fw-bold text-primary font m-0">LOG IN</h2>
+                  </div>
+            
+                  <label for="Username" class="fw-bold">Username</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-person-fill text-primary"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" id="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+            
+                  <label for="Password" class="fw-bold">Password</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-key-fill text-primary"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" id="Password" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+  
+                  <div class="alert alert-danger d-flex align-items-center mt-1 d-none" role="alert" id="login-div">
+                    <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                    <div id="login-error">
+                      <!-- LOGIN ERROR MESSAGE GO HERE -->
+                    </div>
+                  </div>
+            
+                  <button class="btn btn-outline-primary col-12 fw-bold" type="button" id="login_button" disabled>LOG IN</button>
+                  <h6 class="mt-2 mb-4 text-center"> <a href="/html-files/forgotpass.html" class="text-decoration-none">Forgot Password?</a></h6>
+                  <a class="btn btn-outline-secondary col-12 fw-bold" href="/html-files/signup.html">SIGN UP</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end of Modal-->
+
+        <!-- Offcanvas Menu | shown if the menu button is seen when going to lower size screen -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-primary" id="offcanvasExampleLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="d-flex" role="search" id="searchField1">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary " type="submit">Go</button>
+                  </form>
+
+                  <ul class="row row-cols-2 nav-list offcanvas-navlist">
+                    <a href="listView.html?category=editorial">Editorial</a>
+                    <a href="listView.html?category=news">News</a>
+                    <a href="listView.html?category=feature">Feature</a>
+                    <a href="listView.html?category=opinion">Opinion</a>
+                    <a href="listView.html?category=culture">Culture</a>
+                    <a href="listView.html?category=news feature">News Feature</a>
+                    <a href="listView.html?category=column">Column</a>
+                    <a href="listView.html?category=sports">Sports</a>
+                    <a href="listView.html?category=literary">Literary</a>
+                    <a href="archive.html" class="active">Issues</a>
+                  </ul>
+            </div>
+        </div>
+
+
+        <!-- Navigation List of the Categories | shown when in higher size screens -->
+        <div class="container-fluid d-none d-lg-block sticky-top navLinks">
+            <div class="row navigation m-auto">
+              <hr>
+            <hr>
+              <ul class="nav-list">
+                <a href="listView.html?category=editorial">Editorial</a>
+                <a href="listView.html?category=news">News</a>
+                <a href="listView.html?category=feature">Feature</a>
+                <a href="listView.html?category=opinion">Opinion</a>
+                <a href="listView.html?category=culture">Culture</a>
+                <a href="listView.html?category=news feature">News Feature</a>
+                <a href="listView.html?category=column">Column</a>
+                <a href="listView.html?category=sports">Sports</a>
+                <a href="listView.html?category=literary">Literary</a>
+                <a href="archive.html" class="active">Issues</a>
+            </ul>
+            </div>
+        </div>   
+    
+        <!----------------------------------- End of Navigation ----------------------------------->
+
+
+        <!---------------------------------- Start of the Banner Section -------------------------->
+       
+        <div class="container-lg center-80 d-flex flex-column">
+            <div class="row container-80">
+              <div class="margin-bot"></div>
+               <div class="col-12 col-md-9">
+                <div class="row d-flex justify-content-between mb-3">
+                  <span class="issue-name font fw-bold">ISSUES</span>
+
+
+                  <div class="dropdown dropdown-width">
+                    <button class="btn btn-primary dropdown-toggle dropdown-btn d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="text-white font">Category</span>
+                      <ul class="dropdown-menu font">
+                        <li><a class="dropdown-item active" href="#" id="all_issues">All</a></li>
+                        <li><a class="dropdown-item" href="#" id="LF">Literary Folio</a></li>
+                        <li><a class="dropdown-item" href="#" id="N">Newsletter</a></li>
+                        <li><a class="dropdown-item" href="#" id="SM">Sports Magazine</a></li>
+                        <li><a class="dropdown-item" href="#" id="T">Tabloid</a></li>
+                      </ul>
+                    </button>
+                  </div>
+
+                </div>
+                  <div class="row row-cols-3 gap-1 d-flex justify-content-around" id="issue_container">
+                    <!-- <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div>
+                    </div>
+
+                    <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="col-5 col-md-3 issue-col ">
+                      <img src="/img/1.jpg" alt="">
+                      <div class="issue-title">Lorem ipsum dolor sit amet.</div>
+                      <span class="issue-category fw-bold"> Category</span>
+                      <div class="issue-date-pub">Lorem, ipsum dolor.</div> -->
+                    </div>
+                    
+                
+                    
+                  </div>
+                  
+                  <div class="col latest-article-area">
+                    <h4 class="banner-update">LATEST ARTICLE</h4>
+                    <div class="container-inner">
+                      <div class="latest-article-container">
+                        <!-- <small class="latest-article-category font">NEWS</small> -->
+        
+                        <ul class="article-list font" id="latest_articles_container">
+                          <!-- <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                          <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                          <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                          <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li> -->
+                        </ul>
+        
+                        
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+
+              
+        </div>
+        
+        <!---------------------------------- End of the Banner Section ---------------------------->
+
+       
+
+    <div class="container-fluid footer">
+      <div class="row footer-navigation">
+        <div class="col">Copyright 2023. All Rights Reserved.</div>
+        <div class="col">
+          <a href="about.html">ABOUT US</a>
+          <a href="contact.html"> CONTACT US</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="/script/custom-script.js"></script> -->
+    <script type="text/javascript" src="/script/search.js"></script>
+    <script type="text/javascript" src="/script/nav.js"></script>
+    <script type="module" src="/script/account.js"></script>
+    <script type="module" src="/script/login.js"></script>
+    <script type="module" src="/script/issue.js"></script>
+</body>
+</html>

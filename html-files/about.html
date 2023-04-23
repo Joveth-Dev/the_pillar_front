@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT THE PILLAR</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!--Top Navigations -->
+
+        <div class="container-fluid fixed-top" id="mainNavAbout">
+
+
+         <div class="row d-flex justify-content-between align-items-center">
+          <div class="col">
+               <a href="/index.html" class="d-flex justify-content-start align-items-center navbar-brand">
+                <img src="/img/The Pillar Logo.png" alt="" class="brand-logo">
+                <span class="brand-name d-none" id="brandName">The Pillar</span>
+               </a>
+              </div>
+
+
+              <!-- Button trigger modal -->
+              <div class="col d-flex justify-content-end align-items-center" id="profile-btn-div">
+                <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn">
+                  <i class="bi bi-person-fill text-primary" id="accountIcon"></i>
+                </button>
+              </div>
+         </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade glassmorphism" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close_modal"></button>
+              </div>
+              <div class="modal-body">
+               
+                <form action="" class="" id="log-in-form">
+      
+                  <div class="form-header text-center">
+                    <img src="/img/The Pillar Logo.png" class="w-25" alt="">
+                    <h2 class="fw-bold text-primary font m-0">LOG IN</h2>
+                  </div>
+            
+                  <label for="Username" class="fw-bold">Username</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-person-fill text-primary"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" id="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+            
+                  <label for="Password" class="fw-bold">Password</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-key-fill text-primary"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" id="Password" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+  
+                  <div class="alert alert-danger d-flex align-items-center mt-1 d-none" role="alert" id="login-div">
+                    <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                    <div id="login-error">
+                      <!-- LOGIN ERROR MESSAGE GO HERE -->
+                    </div>
+                  </div>
+            
+                  <button class="btn btn-outline-primary col-12 fw-bold" type="button" id="login_button" disabled>LOG IN</button>
+                  <h6 class="mt-2 mb-4 text-center"> <a href="/html-files/forgotpass.html" class="text-decoration-none">Forgot Password?</a></h6>
+                  <a class="btn btn-outline-secondary col-12 fw-bold" href="/html-files/signup.html">SIGN UP</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end of Modal-->
+
+
+
+
+        <!---------------------------------- Start of the banner Section -------------------------->
+       <div class="container-fluid p-0">
+        <div class="row p-0 m-0">
+          <div class="wide-banner">
+            <!-- <div class="overlay"></div> -->
+            <img src="/img/cover2.jpg" alt="">
+          <div class="wide-banner-info">
+            <h1>
+
+              The Pillar
+            </h1>
+       
+            <span class="font fw-normal">The Official Student Publication of the University of Eastern Philippines</span>
+          </div>
+          </div>
+        </div>
+       </div>
+        <!---------------------------------- End of the banner Section ---------------------------->
+
+       
+        <!---------------------------------- Editorial Board and Staff Writters ---------------------------->
+        <div class="container-fluid">
+        <div class="row container-80 m-auto mt-5 mb-5 text-center about-head">
+            <span class="m-0 p-0 title">Editorial Board and Staff</span>
+            <span class="m-0 p-0">Academic Year 2022-2023</span>
+        </div>
+
+
+
+         <div class="row container-80 m-auto about-position">
+          <h2>Editorial Board</h2>
+         </div>
+
+          <div class="row container-80 m-auto mb-4 about-row row row-cols-4" id="editorialBoard">
+                <!-- <div class="col about-col text-center">
+                  <img src="/img/george.jpg" alt="">
+                <div class="member-info">
+                  <p class="writer-name">George Joseph Mejos Banda</p>
+                  <p class="m-0">Editori-in-Chief</p>
+                </div>
+                </div>
+
+              <div class="col about-col text-center">
+                <img src="/img/george.jpg" alt="">
+              <div class="member-info">
+                <p class="writer-name">Niño Anthony Petalbo</p>
+                <p class="m-0">Associate Editor</p>
+              </div>
+              </div>
+
+              <div class="col about-col text-center">
+                <img src="/img/george.jpg" alt="">
+              <div class="member-info">
+                <p class="writer-name">Marwin Taco</p>
+                <p>Managing Editor</p>
+              </div>
+              </div>
+
+
+              <div class="col about-col text-center">
+                <img src="/img/george.jpg" alt="">
+              <div class="member-info">
+                <p class="writer-name">Ian Kervi Balase</p>
+                <p>Culture Editor</p>
+              </div>
+              </div>
+
+
+              <div class="col about-col text-center">
+                <img src="/img/george.jpg" alt="">
+              <div class="member-info">
+                <p class="writer-name">George Joseph Banda</p>
+                <p>Editori-in-Chief</p>
+              </div>
+              </div>
+
+              <div class="col about-col text-center">
+                <img src="/img/george.jpg" alt="">
+              <div class="member-info">
+                <p class="writer-name">George Joseph Banda</p>
+                <p>Editori-in-Chief</p>
+              </div> -->
+           </div>
+
+           
+          </div>
+
+          <div class="row container-80 m-auto about-position">
+            <h2> Staff Writters</h2>
+           </div>
+          <div class="row container-80 m-auto mb-4 about-row row-cols-4" id="staffWriter">
+            <!-- <div class="col about-col text-center">
+             <img src="/img/george.jpg" alt="">
+            <div class="member-info">
+             <p class="writer-name">Joveth Espiritu</p>
+            </div>
+            </div>
+
+            <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">Kizzelyn Floralde</p>
+             </div>
+             </div>
+
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">Maredith Burac</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">Richelle Anne Castillo</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div> -->
+            
+           </div>
+
+
+           <div class="row container-80 m-auto about-position">
+            <h2> Cartoonists</h2>
+           </div>
+          <div class="row container-80 m-auto mb-4 about-row row-cols-4" id="cartoonists">
+            <!-- <div class="col about-col text-center">
+             <img src="/img/george.jpg" alt="">
+            <div class="member-info">
+             <p class="writer-name">George Joseph Banda</p>
+            </div>
+            </div>
+
+            <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div> -->
+            
+           </div>
+
+           <div class="row container-80 m-auto about-position">
+            <h2> Photojournalists</h2>
+           </div>
+          <div class="row container-80 m-auto mb-4 about-row row-cols-4" id="photojournalists">
+            <!-- <div class="col about-col text-center">
+             <img src="/img/george.jpg" alt="">
+            <div class="member-info">
+             <p class="writer-name">George Joseph Banda</p>
+            </div>
+            </div>
+
+            <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div> -->
+            
+           </div>
+
+           <div class="row container-80 m-auto about-position">
+            <h2>Layout Artists</h2>
+           </div>
+          <div class="row container-80 m-auto mb-4 about-row row-cols-4" id="layoutArtists">
+            <!-- <div class="col about-col text-center">
+             <img src="/img/george.jpg" alt="">
+            <div class="member-info">
+             <p class="writer-name">George Joseph Banda</p>
+            </div>
+            </div>
+
+            <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div> -->
+            
+           </div>
+
+           <div class="row container-80 m-auto about-position">
+            <h2>Advisers and Managers</h2>
+           </div>
+          <div class="row container-80 m-auto mb-4 about-row row-cols-4" id="advisersAndManagers">
+            <!-- <div class="col about-col text-center">
+             <img src="/img/george.jpg" alt="">
+            <div class="member-info">
+             <p class="writer-name">George Joseph Banda</p>
+            </div>
+            </div>
+
+            <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div>
+             <div class="col about-col text-center">
+              <img src="/img/george.jpg" alt="">
+             <div class="member-info">
+              <p class="writer-name">George Joseph Banda</p>
+             </div>
+             </div> -->
+            
+           </div>
+
+
+          
+         </div>
+         <!---------------------------------- End of Editorial Board and Staff Writters ---------------------------->
+
+
+
+
+     
+
+       
+       
+
+    <div class="container-fluid footer">
+      <div class="row footer-navigation">
+        <div class="col">Copyright 2023. All Rights Reserved.</div>
+        <div class="col">
+          <a href="about.html">ABOUT US</a>
+          <a href="contact.html"> CONTACT US</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/script/custom-script.js"></script>
+    <script type="text/javascript" src="/script/nav.js"></script>
+    <script type="module" src="/script/account.js"></script>
+    <script type="module" src="/script/login.js"></script>
+    <script type="module" src="/script/about.js"></script>
+</body>
+</html>

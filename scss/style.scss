@@ -1,0 +1,25 @@
+//variable overrides first
+$primary: #001e5b;
+$secondary: #ff9966;
+$nav-pills-link-active-color:#fff;
+$nav-pills-link-active-bg: $secondary;
+$navbar-light-active-color: #fff;
+
+//import the functions and variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+
+//custom-theme color to be added to the existing theme-color
+$custom-theme-colors: (
+    "tdark": rgb(13, 13, 13),
+    "light-secondary": rgb(255, 213, 193),
+    "white": #fff,
+    "light-gray": #efefef
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';

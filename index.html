@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pillar</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!--Top Navigations -->
+
+        <div class="container-fluid navigation" id="mainNav">
+
+
+         <div class="row d-flex justify-content-between align-items-center">
+            <div class="col d-flex justify-content-start align-items-center">
+               
+
+                <a class="btn d-block d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="bi bi-list text-primary"></i>
+                  </a>
+
+                <form class="d-flex search d-none d-lg-inline-flex" role="search" id="searchField" action="html-files/searchresult.html">
+                  <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search"> -->
+                  <input class="form-control" type="search" name="search" placeholder="Search" aria-label="Search" id="search_input">
+                  <button class="btn btn-outline-primary ms-1" type="submit" id="search_button" disabled><i class="bi bi-search"></i></button>
+                </form>
+    
+              </div>
+
+              <div class="col text-center">
+                <a class="navbar-brand" href="index.html">The Pillar</a>
+              </div>
+
+
+              <!-- Button trigger modal -->
+              <div class="col d-flex justify-content-end align-items-center" id="profile-btn-div">
+                <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn" title="Login account">
+                  <i class="bi bi-person-fill text-primary"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade glassmorphism" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close_modal"></button>
+              </div>
+              <div class="modal-body">
+               
+                <form action="" class="" id="log-in-form">
+      
+                  <div class="form-header text-center">
+                    <img src="img/The Pillar Logo.png" class="w-25" alt="">
+                    <h2 class="fw-bold text-primary font m-0">LOG IN</h2>
+                  </div>
+            
+                  <label for="Username" class="fw-bold">Username</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-person-fill text-primary"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" id="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+            
+                  <label for="Password" class="fw-bold">Password</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-key-fill text-primary"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" id="Password" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+  
+                  <div class="alert alert-danger d-flex align-items-center mt-1 d-none" role="alert" id="login-div">
+                    <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                    <div id="login-error">
+                      <!-- LOGIN ERROR MESSAGE GO HERE -->
+                    </div>
+                  </div>
+            
+                  <button class="btn btn-outline-primary col-12 fw-bold" type="button" id="login_button" disabled>LOG IN</button>
+                  <h6 class="mt-2 mb-4 text-center"> <a href="/html-files/forgotpass.html" class="text-decoration-none">Forgot Password?</a></h6>
+                  <a class="btn btn-outline-secondary col-12 fw-bold" href="/html-files/signup.html">SIGN UP</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--end of Modal-->
+
+        <!-- Offcanvas Menu | shown if the menu button is seen when going to lower size screen -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-primary" id="offcanvasExampleLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <form class="d-flex" role="search" id="searchField2" action="html-files/searchresult.html">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-primary" type="submit">Go</button>
+              </form>
+
+                  <ul class="row row-cols-2 nav-list offcanvas-navlist">
+                    <a href="html-files/listView.html?category=editorial">Editorial</a>
+                    <a href="html-files/listView.html?category=news">News</a>
+                    <a href="html-files/listView.html?category=feature">Feature</a>
+                    <a href="html-files/listView.html?category=opinion">Opinion</a>
+                    <a href="html-files/listView.html?category=culture">Culture</a>
+                    <a href="html-files/listView.html?category=news feature">News Feature</a>
+                    <a href="html-files/listView.html?category=column">Column</a>
+                    <a href="html-files/listView.html?category=sports">Sports</a>
+                    <a href="html-files/listView.html?category=literary">Literary</a>
+                    <a href="html-files/archive.html?category=issues">Issues</a>
+                  </ul>
+            </div>
+        </div>
+
+
+        <!-- Navigation List of the Categories | shown when in higher size screens -->
+        <div class="container-fluid d-none d-lg-block sticky-top navLinks">
+            <div class="row navigation m-auto">
+              <hr>
+              <hr>
+              <ul class="nav-list">
+                <a href="html-files/listView.html?category=editorial">Editorial</a>
+                <a href="html-files/listView.html?category=news">News</a>
+                <a href="html-files/listView.html?category=feature">Feature</a>
+                <a href="html-files/listView.html?category=opinion">Opinion</a>
+                <a href="html-files/listView.html?category=culture">Culture</a>
+                <a href="html-files/listView.html?category=news feature">News Feature</a>
+                <a href="html-files/listView.html?category=column">Column</a>
+                <a href="html-files/listView.html?category=sports">Sports</a>
+                <a href="html-files/listView.html?category=literary">Literary</a>
+                <a href="html-files/archive.html">Issues</a>
+            </ul>
+            </div>
+        </div>   
+    
+        <!----------------------------------- End of Navigation ----------------------------------->
+
+
+        <!---------------------------------- Start of the Banner Section -------------------------->
+        <div class="container-lg banner-container">
+          <div class="row container-80">
+            <div class="margin-bot"></div>
+
+            <!-- banner-area-box for carousel -->
+            <div class="col-12 col-sm-7 col-md-9 banner-area-1">
+                <!--Start of Carousel-->
+                <div id="bannerAreaCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators" id="banner_indicator_container">
+                    <!-- BANNER INDICATORS GO HERE -->
+                  </div>
+                  <div class="carousel-inner" id="banner_container">
+                    <!-- BANNERS GO HERE -->
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#bannerAreaCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#bannerAreaCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!--end of carousel-->
+
+
+
+            </div>
+            <div class="col banner-area-box side-area">
+              <h4 class="banner-update">UPDATES</h4>
+              <div class="scroll-banner-area-box">
+                <div class="update-banner-area-box">
+                  <ul class="update-list" id="updates_container">
+                    <!-- UPDATES GO HERE -->
+                    <!-- <a href="first-update">                  
+                        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, dignissimos. <span class="published-date">February 13, 2022</span>
+                        </div>
+                    </a>
+                    <a href="first-update">                  
+                      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, dignissimos. <span class="published-date">February 13, 2022</span>
+                      </div>
+                    </a>
+                    <a href="first-update">                  
+                      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, dignissimos. <span class="published-date">February 13, 2022</span>
+                      </div>
+                    </a>
+                    <a href="first-update">                  
+                      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, dignissimos. <span class="published-date">February 13, 2022</span>
+                      </div>
+                    </a>
+                    <a href="first-update">                  
+                      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, dignissimos. <span class="published-date">February 13, 2022</span>
+                      </div>
+                    </a>
+                    <a href="first-update">                  
+                      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, dignissimos. <span class="published-date">February 13, 2022</span>
+                      </div>
+                    </a>
+                    <a href="first-update">                  
+                      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, dignissimos. <span class="published-date">February 13, 2022</span>
+                      </div>
+                    </a> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------- End of the Banner Section ---------------------------->
+
+
+        <!---------------------------------- Start of Category and Examination results ------------>
+        <div class="container-lg category-exam-container">
+         <div class="row category-exam-area">
+          <div class="col-12 col-lg-9">
+            <div class="row category-area" id="article_categories_container">
+
+              <!-- <div class="col category-box" id="editorial_container">
+
+                    <div class="category-head">
+                      <span class="category-name">EDITORIAL</span>
+                      <span class="category-more">MORE > </span>
+                    </div>
+
+                    <div class="highlight-article">
+                      <div class="highlight-article-img">
+                        <img src="img/basketball.jpg" alt="">
+                      </div>
+                      <div class="highlight-article-info">
+                      <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                        <small class="highlight-date">February 13, 2022</small>
+                      </div>
+                    </div>
+
+                
+                    <ul class="artile-list">
+                      <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                      <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                      <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                      <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                    </ul>
+              </div>
+
+              <div class="col category-box" id="news_container">
+
+                <div class="category-head">
+                  <span class="category-name">NEWS</span>
+                  <span class="category-more">MORE > </span>
+                </div>
+
+                <div class="highlight-article">
+                  <div class="highlight-article-img">
+                    <img src="img/basketball.jpg" alt="">
+                  </div>
+                  <div class="highlight-article-info">
+                  <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                    <small class="highlight-date">February 13, 2022</small>
+                  </div>
+                </div>
+
+            
+                <ul class="artile-list">
+                  <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                  <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                </ul>
+              </div>
+
+              <div class="col category-box" id="feature_container">
+
+                <div class="category-head">
+                  <span class="category-name">FEATURE</span>
+                  <span class="category-more">MORE > </span>
+                </div>
+
+                <div class="highlight-article">
+                  <div class="highlight-article-img">
+                    <img src="img/basketball.jpg" alt="">
+                  </div>
+                  <div class="highlight-article-info">
+                  <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                    <small class="highlight-date">February 13, 2022</small>
+                  </div>
+                </div>
+
+            
+                <ul class="artile-list">
+                  <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                  <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                </ul>
+              </div>
+
+              <div class="col category-box" id="opinion_container">
+
+                <div class="category-head">
+                  <span class="category-name">OPINION</span>
+                  <span class="category-more">MORE > </span>
+                </div>
+
+                <div class="highlight-article">
+                  <div class="highlight-article-img">
+                    <img src="img/basketball.jpg" alt="">
+                  </div>
+                  <div class="highlight-article-info">
+                  <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                    <small class="highlight-date">February 13, 2022</small>
+                  </div>
+                </div>
+
+            
+                <ul class="artile-list">
+                  <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                  <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                </ul>
+              </div>
+
+              <div class="col category-box" id="culture_container">
+
+                <div class="category-head">
+                  <span class="category-name">CULTURE</span>
+                  <span class="category-more">MORE > </span>
+                </div>
+
+                <div class="highlight-article">
+                  <div class="highlight-article-img">
+                    <img src="img/basketball.jpg" alt="">
+                  </div>
+                  <div class="highlight-article-info">
+                  <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                    <small class="highlight-date">February 13, 2022</small>
+                  </div>
+                </div>
+
+            
+                <ul class="artile-list">
+                  <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                  <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                </ul>
+              </div>
+
+              <div class="col category-box" id="newsfeature_container">
+
+                <div class="category-head">
+                  <span class="category-name">NEWS FEATURE</span>
+                  <span class="category-more">MORE > </span>
+                </div>
+
+                <div class="highlight-article">
+                  <div class="highlight-article-img">
+                    <img src="img/basketball.jpg" alt="">
+                  </div>
+                  <div class="highlight-article-info">
+                  <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                    <small class="highlight-date">February 13, 2022</small>
+                  </div>
+                </div>
+
+            
+                <ul class="artile-list">
+                  <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                  <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                </ul>
+              </div>
+
+              <div class="col category-box" id="column_container">
+
+                <div class="category-head">
+                  <span class="category-name">COLUMN</span>
+                  <span class="category-more">MORE > </span>
+                </div>
+
+                <div class="highlight-article">
+                  <div class="highlight-article-img">
+                    <img src="img/basketball.jpg" alt="">
+                  </div>
+                  <div class="highlight-article-info">
+                  <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                    <small class="highlight-date">February 13, 2022</small>
+                  </div>
+                </div>
+
+            
+                <ul class="artile-list">
+                  <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                  <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                </ul>
+              </div>
+
+              <div class="col category-box" id="sports_container">
+
+                <div class="category-head">
+                  <span class="category-name">SPORTS</span>
+                  <span class="category-more">MORE > </span>
+                </div>
+
+                <div class="highlight-article">
+                  <div class="highlight-article-img">
+                    <img src="img/basketball.jpg" alt="">
+                  </div>
+                  <div class="highlight-article-info">
+                  <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                    <small class="highlight-date">February 13, 2022</small>
+                  </div>
+                </div>
+
+            
+                <ul class="artile-list">
+                  <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                  <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                </ul>
+              </div>
+
+              <div class="col-12 col-md-9 category-box" id="literary_container">
+
+                <div class="category-head">
+                  <span class="category-name">LITERARY</span>
+                  <span class="category-more">MORE > </span>
+                </div>
+
+                <div class="highlight-article">
+                  <div class="highlight-article-img">
+                    <img src="img/basketball.jpg" alt="">
+                  </div>
+                  <div class="highlight-article-info">
+                  <h5 class="highlight-article-title">Ball Games or CoE Founding Anniversary Kick Off</h5>
+                    <small class="highlight-date">February 13, 2022</small>
+                  </div>
+                </div>
+
+            
+                <ul class="artile-list">
+                  <li>UEP Attains ISO Certification <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence. <span class="published-date">February 13, 2022</span> </li>
+                  <li>Ball Games for CoE Founding Anniversary Kick Off <span class="published-date">February 13, 2022</span> </li>
+                  <li>Infrastructures: Actualizing the Blueprint of Excellence <span class="published-date">February 13, 2022</span> </li>
+                </ul>
+              </div> -->
+
+            </div>
+          </div>
+
+          <div class="col d-flex flex-column flex-md-row flex-lg-column p-0">
+            <div class="col-12 col-md-6 col-lg-12 side-area mb-2">
+              <h4 class="banner-update">DIGITAL RELEASES</h4>
+              <div class="scroll-banner-area-box">
+                <div class="update-banner-area-box">
+                  <ul class="update-list" id="issues_container">
+                    <!-- ISSUES GO HERE -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+           
+
+          </div>
+         </div>
+        </div>
+        <!---------------------------------- End of the Category and Examination results ---------->
+       
+
+    <div class="container-fluid footer">
+      <div class="row footer-navigation">
+        <div class="col">Copyright 2023. All Rights Reserved.</div>
+        <div class="col">
+          <a href="html-files/about.html">ABOUT US</a>
+          <a href="html-files/contact.html"> CONTACT US</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/script/nav.js"></script>
+    <script type="module" src="script/account.js"></script>
+    <script type="module" src="script/login.js"></script>
+    <script type="module" src="script/index.js"></script>
+</body>
+</html>

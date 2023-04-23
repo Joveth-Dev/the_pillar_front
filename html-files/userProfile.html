@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCOUNT US</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!--Top Navigations -->
+
+        <div class="container-fluid fixed-top bg-white border-bot" id="mainNavAbout">
+
+
+         <div class="row d-flex justify-content-between align-items-center">
+          <div class="col">
+                <a href="/index.html" class="d-flex justify-content-start align-items-center navbar-brand">
+                  <img src="/img/The Pillar Logo.png" alt="" class="brand-logo">
+                <span class="brand-name text-primary">The Pillar</span>
+                </a>
+              </div>
+
+
+              <!-- Button trigger modal -->
+              <!-- <div class="col d-flex justify-content-end align-items-center" id="profile-btn-div">
+                <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn">
+                  <i class="bi bi-person-fill text-primary"></i>
+                </button>
+              </div> -->
+         </div>
+        </div>
+
+
+        <!-- Modal -->
+      <!-- <div class="modal fade glassmorphism" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             
+              <form action="" class="" id="log-in-form">
+    
+                <div class="form-header text-center">
+                  <img src="/img/The Pillar Logo.png" class="w-25" alt="">
+                  <h2 class="fw-bold text-primary font m-0">LOG IN</h2>
+                </div>
+          
+                <label for="Username" class="fw-bold">Username</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text"><i class="bi bi-person-fill text-primary"></i></span>
+                  <input type="text" class="form-control" placeholder="Username" id="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+          
+                <label for="Password" class="fw-bold">Password</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text"> <i class="bi bi-key-fill text-primary"></i></span>
+                  <input type="password" class="form-control" placeholder="Password" id="Password" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="alert alert-danger d-flex align-items-center mt-1 d-none" role="alert" id="login-div">
+                  <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                  <div id="login-error"> -->
+                    <!-- LOGIN ERROR MESSAGE GO HERE -->
+                  <!-- </div>
+                </div>
+          
+                <button class="btn btn-outline-primary col-12 fw-bold" type="button" onclick="getInputs()">LOG IN</button>
+                <h6 class="mt-2 mb-4 text-center"> <a href="#" class="text-decoration-none">Forgot Password?</a> </h6>
+          
+                <a class="btn btn-outline-secondary col-12 fw-bold" href="/html/sign-up.html">SIGN UP</a>
+                </form>
+                
+            </div>
+    
+          </div>
+        </div>
+      </div> -->
+      <!--end of Modal-->
+
+        <!-- Offcanvas Menu | shown if the menu button is seen when going to lower size screen -->
+        <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-primary" id="offcanvasExampleLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="d-flex" role="search" id="searchField">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary " type="submit">Go</button>
+                  </form>
+
+                  <ul class="row row-cols-2 nav-list offcanvas-navlist">
+                    <a href="#">Editorial</a>
+                    <a href="#">News</a>
+                    <a href="#">Feature</a>
+                    <a href="#">Opinion</a>
+                    <a href="#">Culture</a>
+                    <a href="#">News Feature</a>
+                    <a href="#">Column</a>
+                    <a href="#">Sports</a>
+                    <a href="#">Literature</a>
+                    <a href="#">Archive</a>
+                  </ul>
+            </div>
+        </div> -->
+
+        <!---------------------------------- Start of the banner Section -------------------------->
+      
+        <div class="container-fluid d-flex justify-content-center align-items-center full-screen">
+
+           
+            <div class="row container-80 d-flex justify-content-center align-items-center user-profile">
+             
+              
+             
+                <div class="d-flex flex-column flex-md-row align-items-start inner-profile">
+                    <div class="nav flex-row flex-md-column nav-pills me-3 tablist" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <button class="nav-link active" id="v-pills-account-info-tab" data-bs-toggle="pill" data-bs-target="#v-account-info" type="button" role="tab" aria-controls="v-account-info" aria-selected="true">Account Info</button>
+                    
+                      <button class="nav-link" id="v-pills-security-tab" data-bs-toggle="pill" data-bs-target="#v-pills-security" type="button" role="tab" aria-controls="v-pills-security" aria-selected="false">Security</button>
+                      <div class="col-md d-flex justify-content-center align-items-end">
+                        <button class="border border-3 border-danger rounded p-2 logout-btn" type="button" id="logout_button" title="Logout account" data-bs-toggle="modal" data-bs-target="#logOutModal">
+                            <i class="bi bi-box-arrow-left"></i>
+                        </button>
+
+
+
+                        <div class="modal glassmorphism" id="logOutModal" tabindex="-1" aria-labelledby="logOutModal" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-body">
+                                <p>Are you sure you want to log out?</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" id="confirm_logout">Yes</button>
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="tab-content" id="v-pills-tabContent">
+
+                      <div class="tab-pane fade show active" id="v-account-info" role="tabpanel" aria-labelledby="v-account-info-tab" tabindex="0">
+
+                        <div class="row d-flex flex-column flex-lg-row user-info-content">
+
+                          <div class="col d-flex flex-column justify-content-start align-items-center">
+        
+        
+                              <div class="col d-flex flex-column justify-content-center align-items-center ">
+                                <div class="profile-img">
+                                  <div class="user-account-profile" id="account_avatar">
+                                    <!-- USER AVATAR GO HERE -->
+                                  </div>
+          
+                                  <div class="edit-profile-img">
+                                    <div class="cont-edit-img">
+                                      <i class="bi bi-card-image d-inline ms-2 profile-img-btn" type="button" data-bs-toggle="modal" data-bs-target="#edit_avatar"></i>
+                                    </div>
+                                  </div>
+
+                                  <div class="modal glassmorphism" id="edit_avatar" tabindex="-1" aria-labelledby="logOutModal" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title fw-bold text-primary">Upload Profile Picture</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <form method="post" id="edit_avatar_form">
+                                          <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="profilePictureUploadInput" class="form-label">Upload Photo</label>
+                                                <input class="form-control" type="file" iname="profilePicture" accept="image/x-png,image/jpeg" id="profilePictureUploadInput">
+                                            </div>
+                                            <div class="alert alert-danger d-flex flex-row justify-content-start align-items-start mt-1 d-none" role="alert" id="upload_error">
+                                                <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                                                <div id="upload-error">
+                                                <!-- UPLOAD ERROR GO HERE -->
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </form>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" id="confirm_edit_avatar" disabled>Save</button>
+                                          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div>
+        
+                                <div>
+                                  <span id="accountName" class="h4 fw-bold"></span>
+                                </div>
+        
+                                <p id="userName"></p>
+        
+        
+                               
+                                <form action="" class="d-flex flex-column gap-1" id="name_form">
+                                  <div class="col">
+                                    <label for="Last-name" class="fw-bold">Last Name</label>
+                                    <input type="text" class="form-control" id="Last-name" aria-label="Last-name" aria-describedby="basic-addon1" maxlength="50" disabled required>
+                                  </div>
+                                
+                                  <div class="col d-flex flex-row gap-1">
+                                    <div class="col">
+                                      <label for="First-name" class="fw-bold">First Name</label>
+                                      <input type="text" class="form-control" id="First-name" aria-label="First-name" aria-describedby="basic-addon1" maxlength="50" disabled required>
+                                    </div>
+                                
+                                    <div class="col-2">
+                                      <label for="Middle-initial" class="fw-bold text-center w-100">MI</label>
+                                      <input type="text" class="form-control text-center" id="Middle-initial" aria-label="Middle-initial" aria-describedby="basic-addon1" maxlength="1" disabled>
+                                    </div>
+                                  </div>
+                                  <!-- <button class="btn btn-secondary w-100 fw-bold text-light" type="submit" id="edit_button_name" title="Edit name">Edit</button> -->
+                                </form>
+
+                                <!-- <form action="" class="d-flex flex-column gap-1">
+                                  <div class="col">
+                                    <label for="Last-name" class="fw-bold">Last Name</label>
+                                    <input type="text" class="form-control" placeholder="" id="Last-name" aria-label="Last-name" aria-describedby="basic-addon1" maxlength="50" required>
+                                  </div>
+            
+                                  <div class="col d-flex flex-row gap-1">
+                                    <div class="col">
+                                      <label for="First-name" class="fw-bold">First Name</label>
+                                      <input type="text" class="form-control" placeholder="" id="First-name" aria-label="First-name" aria-describedby="basic-addon1" maxlength="50" required>
+                                    </div>
+            
+                                    <div class="col-2">
+                                      <label for="Middle-initial" class="fw-bold text-center w-100">MI</label>
+                                      <input type="text" class="form-control text-center" placeholder="" id="Middle-initial" aria-label="Middle-initial" aria-describedby="basic-addon1" maxlength="1" disabled>
+                                    </div>
+                                  </div>
+                                <button class="btn btn-secondary w-100 fw-bold text-light" type="button" id="edit_button_name" title="Edit name">Edit</button>
+                              </form> -->
+                            </div>
+                                 
+        
+        
+                           
+        
+                          </div>
+                <div class="col d-flex flex-column justify-content-start align-items-center">
+                  <h4 class="mt-4 fw-bold">Additional Information</h4>
+                  <form action="" id="add_info_form">
+                    <!-- second row -->
+                    <div class="col">
+                      <label for="email" class="fw-bold">Email</label>
+                      <input type="email" class="form-control" placeholder="" id="email" aria-label="email" aria-describedby="basic-addon1" maxlength="320" disabled required>
+                    </div>
+                    <div class="row mb-3 d-flex flex-column flex-sm-row">
+                      <div class="col">
+                            <label for="Birthdate" class="fw-bold">Birthdate</label>
+                            <input type="date" class="form-control" id="Birthdate" profile-input="birthdate" aria-label="Birthdate" disabled>
+                      </div>
+                      <div class="col">
+                        <label for="select-sex" class="fw-bold">Sex</label>
+                        <select class="form-select" id="select-sex" profile-input="sex" disabled>
+                          <option value="N" selected>Not set</option>
+                          <option value="F">Female</option>
+                          <option value="M">Male</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--4th row-->
+                    <div class="row mb-3 d-flex flex-column flex-sm-row">
+                      <div class="col">
+                        <label for="City-municipality" class="fw-bold">City/Municipality</label>
+                        <input type="text" class="form-control" id="City-municipality" profile-input="city" aria-label="City-municipality" maxlength="50" disabled>
+                      </div>
+                      <div class="col">
+                        <label for="Country" class="fw-bold">Country</label>
+                        <!-- countries -->
+                        <select class="form-select" id="country" profile-input="country" name="countries" disabled>
+                          <option value="" hidden>Select</option>
+                          <option value="Afghanistan">Afghanistan</option>
+                          <option value="Åland Islands">Åland Islands</option>
+                          <option value="Albania">Albania</option>
+                          <option value="Algeria">Algeria</option>
+                          <option value="American Samoa">American Samoa</option>
+                          <option value="Andorra">Andorra</option>
+                          <option value="Angola">Angola</option>
+                          <option value="Anguilla">Anguilla</option>
+                          <option value="Antarctica">Antarctica</option>
+                          <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                          <option value="Argentina">Argentina</option>
+                          <option value="Armenia">Armenia</option>
+                          <option value="Aruba">Aruba</option>
+                          <option value="Australia">Australia</option>
+                          <option value="Austria">Austria</option>
+                          <option value="Azerbaijan">Azerbaijan</option>
+                          <option value="Bahamas">Bahamas</option>
+                          <option value="Bahrain">Bahrain</option>
+                          <option value="Bangladesh">Bangladesh</option>
+                          <option value="Barbados">Barbados</option>
+                          <option value="Belarus">Belarus</option>
+                          <option value="Belgium">Belgium</option>
+                          <option value="Belize">Belize</option>
+                          <option value="Benin">Benin</option>
+                          <option value="Bermuda">Bermuda</option>
+                          <option value="Bhutan">Bhutan</option>
+                          <option value="Bolivia">Bolivia</option>
+                          <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+                          <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                          <option value="Botswana">Botswana</option>
+                          <option value="Bouvet Island">Bouvet Island</option>
+                          <option value="Brazil">Brazil</option>
+                          <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                          <option value="Brunei Darussalam">Brunei Darussalam</option>
+                          <option value="Bulgaria">Bulgaria</option>
+                          <option value="Burkina Faso">Burkina Faso</option>
+                          <option value="Burundi">Burundi</option>
+                          <option value="Cabo Verde">Cabo Verde</option>
+                          <option value="Cambodia">Cambodia</option>
+                          <option value="Cameroon">Cameroon</option>
+                          <option value="Canada">Canada</option>
+                          <option value="Cayman Islands">Cayman Islands</option>
+                          <option value="Central African Republic">Central African Republic</option>
+                          <option value="Chad">Chad</option>
+                          <option value="Chile">Chile</option>
+                          <option value="China">China</option>
+                          <option value="Christmas Island">Christmas Island</option>
+                          <option value="Cocos Islands">Cocos Islands</option>
+                          <option value="Colombia">Colombia</option>
+                          <option value="Comoros">Comoros</option>
+                          <option value="Congo">Congo</option>
+                          <option value="Congo">Congo</option>
+                          <option value="Cook Islands">Cook Islands</option>
+                          <option value="Costa Rica">Costa Rica</option>
+                          <option value="Croatia">Croatia</option>
+                          <option value="Cuba">Cuba</option>
+                          <option value="Curaçao">Curaçao</option>
+                          <option value="Cyprus">Cyprus</option>
+                          <option value="Czechia">Czechia</option>
+                          <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                          <option value="Denmark">Denmark</option>
+                          <option value="Djibouti">Djibouti</option>
+                          <option value="Dominica">Dominica</option>
+                          <option value="Dominican Republic">Dominican Republic</option>
+                          <option value="Ecuador">Ecuador</option>
+                          <option value="Egypt">Egypt</option>
+                          <option value="El Salvador">El Salvador</option>
+                          <option value="Equatorial Guinea">Equatorial Guinea</option>
+                          <option value="Eritrea">Eritrea</option>
+                          <option value="Estonia">Estonia</option>
+                          <option value="Eswatini">Eswatini</option>
+                          <option value="Ethiopia">Ethiopia</option>
+                          <option value="Falkland Islands">Falkland Islands</option>
+                          <option value="Faroe Islands">Faroe Islands</option>
+                          <option value="Fiji">Fiji</option>
+                          <option value="Finland">Finland</option>
+                          <option value="France">France</option>
+                          <option value="French Guiana">French Guiana</option>
+                          <option value="French Polynesia">French Polynesia</option>
+                          <option value="French Southern Territories">French Southern Territories</option>
+                          <option value="Gabon">Gabon</option>
+                          <option value="Gambia">Gambia</option>
+                          <option value="Georgia">Georgia</option>
+                          <option value="Germany">Germany</option>
+                          <option value="Ghana">Ghana</option>
+                          <option value="Gibraltar">Gibraltar</option>
+                          <option value="Greece">Greece</option>
+                          <option value="Greenland">Greenland</option>
+                          <option value="Grenada">Grenada</option>
+                          <option value="Guadeloupe">Guadeloupe</option>
+                          <option value="Guam">Guam</option>
+                          <option value="Guatemala">Guatemala</option>
+                          <option value="Guernsey">Guernsey</option>
+                          <option value="Guinea">Guinea</option>
+                          <option value="Guinea-Bissau">Guinea-Bissau</option>
+                          <option value="Guyana">Guyana</option>
+                          <option value="Haiti">Haiti</option>
+                          <option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+                          <option value="Holy See">Holy See</option>
+                          <option value="Honduras">Honduras</option>
+                          <option value="Hong Kong">Hong Kong</option>
+                          <option value="Hungary">Hungary</option>
+                          <option value="Iceland">Iceland</option>
+                          <option value="India">India</option>
+                          <option value="Indonesia">Indonesia</option>
+                          <option value="Iran">Iran</option>
+                          <option value="Iraq">Iraq</option>
+                          <option value="Ireland">Ireland</option>
+                          <option value="Isle of Man">Isle of Man</option>
+                          <option value="Israel">Israel</option>
+                          <option value="Italy">Italy</option>
+                          <option value="Jamaica">Jamaica</option>
+                          <option value="Japan">Japan</option>
+                          <option value="Jersey">Jersey</option>
+                          <option value="Jordan">Jordan</option>
+                          <option value="Kazakhstan">Kazakhstan</option>
+                          <option value="Kenya">Kenya</option>
+                          <option value="Kiribati">Kiribati</option>
+                          <option value="South Korea">South Korea</option>
+                          <option value="Kuwait">Kuwait</option>
+                          <option value="Kyrgyzstan">Kyrgyzstan</option>
+                          <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                          <option value="Latvia">Latvia</option>
+                          <option value="Lebanon">Lebanon</option>
+                          <option value="Lesotho">Lesotho</option>
+                          <option value="Liberia">Liberia</option>
+                          <option value="Libya">Libya</option>
+                          <option value="Liechtenstein">Liechtenstein</option>
+                          <option value="Lithuania">Lithuania</option>
+                          <option value="Luxembourg">Luxembourg</option>
+                          <option value="Macao">Macao</option>
+                          <option value="Madagascar">Madagascar</option>
+                          <option value="Malawi">Malawi</option>
+                          <option value="Malaysia">Malaysia</option>
+                          <option value="Maldives">Maldives</option>
+                          <option value="Mali">Mali</option>
+                          <option value="Malta"></option>
+                          <option value="Marshall Islands">Marshall Islands</option>
+                          <option value="Martinique">Martinique</option>
+                          <option value="Mauritania">Mauritania</option>
+                          <option value="Mauritius">Mauritius</option>
+                          <option value="Mayotte">Mayotte</option>
+                          <option value="Mexico">Mexico</option>
+                          <option value="Micronesia">Micronesia</option>
+                          <option value="Moldova">Moldova</option>
+                          <option value="Monaco">Monaco</option>
+                          <option value="Mongolia">Mongolia</option>
+                          <option value="Montenegro">Montenegro</option>
+                          <option value="Montserrat">Montserrat</option>
+                          <option value="Morocco">Morocco</option>
+                          <option value="Mozambique">Mozambique</option>
+                          <option value="Myanmar">Myanmar</option>
+                          <option value="Namibia">Namibia</option>
+                          <option value="Nauru">Nauru</option>
+                          <option value="Nepal">Nepal</option>
+                          <option value="Netherlands">Netherlands</option>
+                          <option value="New Caledonia">New Caledonia</option>
+                          <option value="New Zealand">New Zealand</option>
+                          <option value="Nicaragua">Nicaragua</option>
+                          <option value="Niger">Niger</option>
+                          <option value="Nigeria">Nigeria</option>
+                          <option value="Niue">Niue</option>
+                          <option value="Norfolk Island">Norfolk Island</option>
+                          <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                          <option value="Norway">Norway</option>
+                          <option value="Oman">Oman</option>
+                          <option value="Pakistan">Pakistan</option>
+                          <option value="Palau">Palau</option>
+                          <option value="Palestine, State of">Palestine, State of</option>
+                          <option value="Panama">Panama</option>
+                          <option value="Papua New Guinea">Papua New Guinea</option>
+                          <option value="Paraguay">Paraguay</option>
+                          <option value="Peru">Peru</option>
+                          <option value="Philippines">Philippines</option>
+                          <option value="Pitcairn">Pitcairn</option>
+                          <option value="Poland">Poland</option>
+                          <option value="Portugal">Portugal</option>
+                          <option value="Puerto Rico">Puerto Rico</option>
+                          <option value="Qatar">Qatar</option>
+                          <option value="Republic of North Macedonia">Republic of North Macedonia</option>
+                          <option value="Romania">Romania</option>
+                          <option value="Russian Federation">Russian Federation</option>
+                          <option value="Rwanda">Rwanda</option>
+                          <option value="Réunion">Réunion</option>
+                          <option value="Saint Barthélemy">Saint Barthélemy</option>
+                          <option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+                          <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                          <option value="Saint Lucia">Saint Lucia</option>
+                          <option value="Saint Martin">Saint Martin</option>
+                          <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                          <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                          <option value="Samoa">Samoa</option>
+                          <option value="San Marino">San Marino</option>
+                          <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                          <option value="Saudi Arabia">Saudi Arabia</option>
+                          <option value="Senegal">Senegal</option>
+                          <option value="Serbia">Serbia</option>
+                          <option value="Seychelles">Seychelles</option>
+                          <option value="Sierra Leone">Sierra Leone</option>
+                          <option value="Singapore">Singapore</option>
+                          <option value="Sint Maarten">Sint Maarten</option>
+                          <option value="Slovakia">Slovakia</option>
+                          <option value="Slovenia">Slovenia</option>
+                          <option value="Solomon Islands">Solomon Islands</option>
+                          <option value="Somalia">Somalia</option>
+                          <option value="South Africa">South Africa</option>
+                          <option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+                          <option value="South Sudan">South Sudan</option>
+                          <option value="Spain">Spain</option>
+                          <option value="Sri Lanka">Sri Lanka</option>
+                          <option value="Sudan">Sudan</option>
+                          <option value="Suriname">Suriname</option>
+                          <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                          <option value="Sweden">Sweden</option>
+                          <option value="Switzerland">Switzerland</option>
+                          <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                          <option value="Taiwan">Taiwan</option>
+                          <option value="Tajikistan">Tajikistan</option>
+                          <option value="Tanzania">Tanzania</option>
+                          <option value="Thailand">Thailand</option>
+                          <option value="Timor-Leste">Timor-Leste</option>
+                          <option value="Togo">Togo</option>
+                          <option value="Tokelau">Tokelau</option>
+                          <option value="Tonga">Tonga</option>
+                          <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                          <option value="Tunisia">Tunisia</option>
+                          <option value="Turkey">Turkey</option>
+                          <option value="Turkmenistan">Turkmenistan</option>
+                          <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                          <option value="Tuvalu">Tuvalu</option>
+                          <option value="Uganda">Uganda</option>
+                          <option value="Ukraine">Ukraine</option>
+                          <option value="United Arab Emirates">United Arab Emirates</option>
+                          <option value="United Kingdom of Great Britain and Northern Ireland">United Kingdom of Great Britain and Northern Ireland</option>
+                          <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                          <option value="United States of America">United States of America</option>
+                          <option value="Uruguay">Uruguay</option>
+                          <option value="Uzbekistan">Uzbekistan</option>
+                          <option value="Vanuatu">Vanuatu</option>
+                          <option value="Venezuela">Venezuela</option>
+                          <option value="Viet Nam">Viet Nam</option>
+                          <option value="Virgin Islands">Virgin Islands</option>
+                          <option value="Virgin Islands">Virgin Islands</option>
+                          <option value="Wallis and Futuna">Wallis and Futuna</option>
+                          <option value="Western Sahara">Western Sahara</option>
+                          <option value="Yemen">Yemen</option>
+                          <option value="Zambia">Zambia</option>
+                          <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button class="btn btn-secondary w-100 fw-bold text-light" type="submit" id="edit_button" title="Edit additional info">Edit</button>
+                  </form>
+                  <div class="alert alert-danger d-flex form-control mt-1 d-none" role="alert" id="update_error">
+                    <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                    <div id="update_error_message">
+                      <!-- UPDATE ERROR GO HERE -->
+                    </div>
+                  </div>
+                </div>
+        
+        
+                        
+        
+        
+                         
+                        </div>
+
+
+
+
+                       
+
+
+
+
+                      </div>
+
+
+
+                   
+
+
+                      <div class="tab-pane fade" id="v-pills-security" role="tabpanel" aria-labelledby="v-pills-security-tab" tabindex="0">
+
+                        <div class="row d-flex flex-column flex-lg-row user-info-content">
+
+                            <div class="col d-flex flex-column justify-content-start align-items-center">
+          
+                              <div class="row mb-3 d-flex flex-column password-sec">
+          
+                                <h4 class="fw-bold">Password Management</h4>
+                                <p class="security-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur cum aspernatur iure consequuntur omnis magni quidem adipisci laboriosam nulla impedit?</p>
+          
+                                <button class="btn btn-primary" type="button" id="change_password_button">Change Password</button>
+                                <div class="alert alert-danger d-flex form-control mt-1 d-none" role="alert" id="change_pass_error">
+                                  <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                                  <div id="change_pass_error_message">
+                                    <!-- UPDATE ERROR GO HERE -->
+                                  </div>
+                                </div>
+          
+                                <div class="mt-3 border rounded p-2 bg-light d-none" id="change_pass_container">
+                                  <form action="" id="change_pass_form">
+                                    <h4>Update Password</h4>
+                                    <div class="col">
+                                      <label for="Current-Password" class="fw-bold">Current Password</label>
+                                      <input type="password" class="form-control" id="Current-Password" aria-label="Current-Password" minlength="8" maxlength="25" required>
+                                    </div>
+            
+                                    <div class="col">
+                                      <label for="New-Password" class="fw-bold">New Password</label>
+                                      <input type="password" class="form-control" id="New-Password" aria-label="New-Password" minlength="8" maxlength="25" required>
+                                      
+                                    </div>
+                                   
+            
+                                    <div class="col">
+                                      <label for="Confirm-password" class="fw-bold">Confirm Password</label>
+                                      <input type="password" class="form-control" id="Confirm-password" aria-label="Confirm-password" minlength="8" maxlength="25" required>
+                                    </div>
+            
+                                    <div class="d-flex flex-row gap-1 justify-content-end align-items-end mt-1">
+                                      <button type="submit" class="btn btn-secondary text-light fw-bold" id="change_pass_save">Save Changes</button>
+                                      <button type="button" class="btn btn-primary fw-bold" id="cancel_change_pass">Cancel</button>
+                                    </div>
+                                  </form>
+                                </div>
+          
+          
+          
+                                
+                              </div>
+          
+                            </div>
+                            <div class="col d-flex flex-column justify-content-start align-items-center accountM-sec">
+          
+                              <div class="row mb-3 d-flex flex-column password-sec">
+          
+                                <h4 class="fw-bold">Account Management</h4>
+                                <p class="security-description">Deactivating your account will temporarily disable your access to The Pillar, but your information will still be stored in the system and you can reactivate your account in the future.</p>
+          
+                                <button class="btn btn-primary" type="button" id="deactivate_acc_button">Deactivate Account</button>
+
+                                <div class="alert alert-danger d-flex form-control mt-1 d-none" role="alert" id="deactivate_acc_error">
+                                  <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                                  <div id="deactivate_acc_error_message">
+                                    <!-- UPDATE ERROR GO HERE -->
+                                  </div>
+                                </div>
+                                
+                                <form action="" class="mt-3 border rounded p-2 bg-light d-none" id="deactivate_acc_form">
+                                  <h4>Enter Your Password</h4>
+                                  <input type="password" class="form-control" id="password" aria-label="Confirm-password" required>
+          
+                                  <div class="d-flex flex-row gap-1 justify-content-end align-items-end mt-1">
+                                    <button type="submit" class="btn btn-secondary text-light fw-bold" data-bs-toggle="modal" id="deactivate_acc_submit" disabled>Submit</button>
+                                    <button type="button" class="btn btn-primary fw-bold" id="deactivate_acc_cancel">Cancel</button>
+                                  </div>
+                                </form>
+          
+          
+                                <!-- Modal -->
+                                <div class="modal fade" id="DeleteAccount" tabindex="-1" aria-labelledby="DeleteAccountLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="DeleteAccountLabel">Delete Account</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                    
+                                        <i class="bi bi-person-x delete-icon"></i>
+                    
+                                        <span>Are you sure you want to delete your account?</span>
+                                        <span>This cannot be undone.</span>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal" id="confirm_delete">Yes, Delete</button>
+                                        <button type="button" class="btn btn-primary fw-bold" data-bs-dismiss="modal" id="cancel_confirm">Cancel</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                              </div>
+          
+                            </div>
+          
+          
+                          
+          
+          
+                           
+                          </div>
+
+
+                      </div>
+                    
+                     
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!---------------------------------- End of the banner Section ---------------------------->
+
+       
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="/script/custom-script.js"></script> -->
+    <script type="module" src="/script/current_user.js"></script>
+</body>
+</html>

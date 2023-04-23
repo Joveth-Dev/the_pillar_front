@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORGOT PASSWORD</title>
+    
+    <!--Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   
+    <!--Javascript-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+</head>
+<body>
+
+  <!--navigation bar when in signup and log in-->
+
+      <div class="container-fluid border-bot" id="mainNavAbout">
+
+
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <a href="/index.html" class="d-flex justify-content-start align-items-center navbar-brand">
+                    <img src="/img/The Pillar Logo.png" alt="" class="brand-logo">
+                <span class="brand-name text-primary">The Pillar</span>
+                </a>
+            </div> 
+        </div>
+      </div>
+
+
+
+
+
+  <!--ACCOUNT CREATION-->
+
+      <div class="container-lg" id="forgotPasswordContainer">
+        
+        <div class="forgot-pass-main active" id="FindAccount">
+          <div class="text-center" id="forgotPasswordHeader">
+            <i class="bi bi-search icon-forgot-pass"></i>
+            <div class="">
+              <h3 class="fw-bold text-primary" id="forgotPassHeaderTitle">Find Your Account</h3>
+            </div>
+
+        </div>
+
+        <p>Please enter your email address to search for your account, and we will send there your code.</p>
+
+        <form action="" id="reset_password_form">
+          <input type="email" class="form-control" placeholder="" id="email" aria-label="Email" aria-describedby="basic-addon1" maxlength="320" required>
+
+          <button class="btn btn-secondary col-12 fw-bold text-light mt-2" type="submit" id="continue_button">CONTINUE</button>
+        </form>
+        
+        <br>
+        <div class="alert alert-danger d-flex align-items-center mt-1 d-none" role="alert" id="forgot_password_error">
+          <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+          <div id="forgot_password_error_message">
+            <!-- FOGOT PASSWORD ERROR GO HERE -->
+          </div>
+        </div>
+      </div>
+
+        <div class="forgot-pass-main" id="reset_link_sent">
+          <div class="text-center">
+            <i class="bi bi-search icon-forgot-pass"></i>
+            <div class="">
+              <h3 class="fw-bold text-primary">Find Your Account</h3>
+            </div>
+          </div>
+        <p>A password reset link was sent to your email. Please check.</p>
+        <button class="btn btn-secondary col-12 fw-bold text-light mt-2" type="button" id="login_link">LOGIN</button>
+        </div>
+      </div>
+  
+
+
+        <!--script-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script type="module" src="/script/forgot_password.js"></script>
+     </body>
+    </html>

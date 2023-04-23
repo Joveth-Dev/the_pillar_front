@@ -1,0 +1,149 @@
+#expandingContainer {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: rgb(246, 246, 246);
+  margin-bottom: 1rem;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+  overflow: auto;
+  border: 1px solid var(--primary);
+}
+
+#expand-button, #zoom-in, #zoom-out{
+  color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+    #expandingContainer{
+        width: 100%;
+    }
+    .buttons{
+        position: absolute;
+        left: 0;
+    }
+}
+
+
+
+#expandingContainer.expanded{
+  width: 100vw;
+  height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 2147483647;
+background-color: rgb(229, 229, 229);
+display: flex;
+justify-content: center;
+align-items: start;
+}
+
+.pdf-container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+canvas{
+height: 100%;
+object-fit: scale-down;
+margin: auto;
+}
+
+.error {
+background: orangered;
+color: #fff;
+padding: 1rem;
+}
+
+.prev, .next {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    transition: .45s;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+}
+.prev>i, .next>i{
+font-size: 2.5rem;
+color: var(--primary);
+}
+
+.prev> i:hover, .next >i:hover{
+    color: #56678b;
+
+}
+
+.next {
+    right: 0;
+    padding-right: 2rem;
+}
+.prev {
+    left: 0;
+    padding-left: 2rem;
+}
+
+.pdf-viewer-bar{
+    width: 100%;
+    background-color: var(--primary);
+    position: relative;
+}
+
+.download-btn{
+    position: absolute;
+    right: 0;
+    margin: .5rem 1rem .5rem .5rem;
+
+}
+
+.page-info{
+    width: auto;
+    padding: .5rem;
+    color: #fff;
+    float: left;
+}
+
+.pdf-viewer-bar{
+    z-index: 999;
+}
+
+.inner-pdf-viewer-container{
+    position: relative;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.inner-pdf-viewer-container::-webkit-scrollbar{
+    width: 7px;
+}
+
+.inner-pdf-viewer-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* color of the scrollbar thumb */
+.inner-pdf-viewer-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    overflow: hidden;
+}
+
+.inner-most-pdf{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

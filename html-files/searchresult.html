@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>READ VIEW</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!--Top Navigations -->
+
+        <div class="container-fluid navigation top-0" id="mainNav">
+
+
+         <div class="row d-flex justify-content-between align-items-center">
+            <div class="col d-flex justify-content-start align-items-center">
+               
+
+                <a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="bi bi-list text-primary"></i>
+                  </a>
+
+               
+    
+               
+    
+              </div>
+
+              <div class="col text-center">
+                <a class="navbar-brand" href="/index.html">The Pillar</a>
+              </div>
+
+
+              <!-- Button trigger modal -->
+              <div class="col d-flex justify-content-end align-items-center" id="profile-btn-div">
+                <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn">
+                  <i class="bi bi-person-fill text-primary"></i>
+                </button>
+              </div>
+         </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade glassmorphism" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               
+                <form action="" class="" id="log-in-form">
+      
+                  <div class="form-header text-center">
+                    <img src="/img/The Pillar Logo.png" class="w-25" alt="">
+                    <h2 class="fw-bold text-primary font m-0">LOG IN</h2>
+                  </div>
+            
+                  <label for="Username" class="fw-bold">Username</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-person-fill text-primary"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" id="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+            
+                  <label for="Password" class="fw-bold">Password</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-key-fill text-primary"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" id="Password" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+  
+                  <div class="alert alert-danger d-flex align-items-center mt-1 d-none" role="alert" id="login-div">
+                    <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                    <div id="login-error">
+                      <!-- LOGIN ERROR MESSAGE GO HERE -->
+                    </div>
+                  </div>
+            
+                  <button class="btn btn-outline-primary col-12 fw-bold" type="button" id="login_button" disabled>LOG IN</button>
+                  <h6 class="mt-2 mb-4 text-center"> <a href="/html-files/forgotpass.html" class="text-decoration-none">Forgot Password?</a></h6>
+            
+                  <a class="btn btn-outline-secondary col-12 fw-bold" href="/html-files/signup.html">SIGN UP</a>
+                </form>
+                  
+              </div>
+      
+            </div>
+          </div>
+        </div>
+        <!--end of Modal-->
+
+        <!-- Offcanvas Menu | shown if the menu button is seen when going to lower size screen -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-primary" id="offcanvasExampleLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="close_modal"></button>
+            </div>
+            <div class="offcanvas-body">
+                
+
+                  <ul class="row row-cols-2 nav-list offcanvas-navlist">
+                    <a href="/html-files/listView.html?category=editorial">Editorial</a>
+                    <a href="/html-files/listView.html?category=news">News</a>
+                    <a href="/html-files/listView.html?category=feature">Feature</a>
+                    <a href="/html-files/listView.html?category=opinion">Opinion</a>
+                    <a href="/html-files/listView.html?category=culture">Culture</a>
+                    <a href="/html-files/listView.html?category=news feature">News Feature</a>
+                    <a href="/html-files/listView.html?category=column">Column</a>
+                    <a href="/html-files/listView.html?category=sports">Sports</a>
+                    <a href="/html-files/listView.html?category=literary">Literary</a>
+                    <a href="/html-files/archive.html?category=issues">Issues</a>
+                  </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="container-fluid search-cont">
+            <div class="row container-80 m-auto mt-5">
+              <div class="margin-bot"></div>
+
+                <div class="search-large">   
+                  <form class="d-flex search" role="search" id="searchField">
+                    <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="search_input"> -->
+                    <input class="form-control" type="search" name="search" placeholder="Search" aria-label="Search" id="search_input">
+                    <button class="btn btn-primary ms-1" type="submit" id="search_button"><i class="bi bi-search"></i></button>
+                  </form>
+                </div>
+
+                <h1 class="text-primary">Search Results</h1>
+                <p id="results_count" class="font">0 results found</p>
+                <div class="row result-show" id="search_container">
+                    <!-- ARTICLE SEARCH RESULTS GO HERE -->
+                    <!-- <div class="col">
+                        <img src="/img/10.jpg" alt="">
+                        <div class="article-details font">
+                            <h4 class="article-title">Ball Games for CoE Founding Anniversary Kick Off</h4>
+                            <small class="article-author fw-bold text-primary">George Joseph Banda</small>
+                            <small class="article-date-pub">February 17, 2023</small>
+                        </div>
+                    </div> -->
+                    <!-- 
+                    <div class="col">gfgf</div>
+                    <div class="col">gfgf</div>
+                    <div class="col">fgfgf</div>
+                    <div class="col">fgf</div>
+                    <div class="col">gfgf</div> -->
+                </div>
+
+                
+            </div>
+        </div>
+
+
+
+       
+       
+
+    <div class="container-fluid footer">
+      <div class="row footer-navigation">
+        <div class="col">Copyright 2023. All Rights Reserved.</div>
+        <div class="col">
+          <a href="about.html">ABOUT US</a>
+          <a href="contact.html"> CONTACT US</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="/script/custom-script.js"></script> -->
+    <script type="module" src="/script/search_result.js"></script>
+    <script type="module" src="/script/account.js"></script>
+    <script type="module" src="/script/login.js"></script>
+</body>
+</html>
