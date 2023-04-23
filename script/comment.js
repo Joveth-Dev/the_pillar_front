@@ -154,7 +154,7 @@ function enableEditComment(comment_id){
                 if (input_element.value.trim() === '') {
                     input_element.reportValidity();
                 }else{
-                    editReply(comment_id);
+                    editComment(comment_id);
                 }
             }
     
@@ -166,7 +166,7 @@ function enableEditComment(comment_id){
     }
 }
 
-function editReply(comment_id){
+function editComment(comment_id){
     try{
         if(sessionStorage.getItem('access') && sessionStorage.getItem('refresh')){
             const access = sessionStorage.getItem('access');
@@ -213,7 +213,7 @@ function editReply(comment_id){
                             }else{
                                 console.log('new access');
                                 sessionStorage.setItem('access', data.access);
-                                editReply(comment_id);
+                                editComment(comment_id);
                             }
                         })
                         .catch(error => console.error(error));
@@ -251,7 +251,7 @@ function cancelEditComment(comment_id){
     document.getElementById(`delete_${comment_id}`).setAttribute('class', 'bi bi-trash');
 }
 
-function deleteReply(comment_id){
+function deleteComment(comment_id){
     try{
         if(sessionStorage.getItem('access') && sessionStorage.getItem('refresh')){
             const access = sessionStorage.getItem('access');
@@ -290,7 +290,7 @@ function deleteReply(comment_id){
                             }else{
                                 console.log('new access');
                                 sessionStorage.setItem('access', data.access);
-                                deleteReply(comment_id);
+                                deleteComment(comment_id);
                             }
                         })
                         .catch(error => console.error(error));
@@ -319,6 +319,6 @@ function confirmDeleteCommentModal(comment_id){
     })
 
     document.getElementById('confirm_delete_comment').addEventListener('click', function() {
-        deleteReply(comment_id);
+        deleteComment(comment_id);
     })
 }
