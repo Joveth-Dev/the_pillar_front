@@ -1,5 +1,14 @@
 import { getData, setData } from './api_fetch.js';
 
+// prevent page from scrolling up when closing modal
+const modal = document.getElementById('modal-btn');
+const closeButton = document.getElementById('close_modal');
+
+closeButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the event
+    modal.style.display = 'none'; // Hide the modal
+});
+
 window.onload = function(){
     showIssue();
     displayLikes();
