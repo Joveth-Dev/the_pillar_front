@@ -45,13 +45,20 @@ font-family: nyt-cheltenham, georgia,'times new roman',times,serif;
     text-decoration: none;
   }
 
+
   .link-style:hover .article-list-title{
     text-decoration: underline;
   }
 
-  .link-style:hover .latest_article_item{
+  .latest-article-item{
+    line-height: 1;
+    margin-bottom: .8rem;
+  }
+
+  .link-style:hover .latest-article-item{
     text-decoration: underline;
   }
+
 
   .link-style:hover .highlight-article>.highlight-article-info h5 {
     text-decoration: underline;
@@ -146,6 +153,10 @@ font-family: nyt-cheltenham, georgia,'times new roman',times,serif;
   .navLinks.scrolled .nav-list a{
     color: #fff;
   }
+
+  .navLinks.scrolled .nav-list a:hover, .navLinks.scrolled .nav-list a.active {
+    border-bottom-color: #fff;
+ }
   .navLinks.scrolled hr{
     display: none;
   }
@@ -488,11 +499,13 @@ hr{
     margin-top: .5rem;
 }
 
-.artile-list>li{
+.article-list>li{
     line-height: 1;
     margin-bottom: .5rem;
     text-align: justify;
 }
+
+
 
 /* FOOTER */
 
@@ -549,7 +562,6 @@ hr{
 }
 
 .category-highlight{
-    border-bottom: 2px solid var(--primary);
     padding-bottom: 1rem;
     text-decoration: none;
 }
@@ -590,8 +602,7 @@ hr{
 
 .catergory-articles{
     gap: 1;
-    margin: .5rem;
-    padding-top: 5rem;
+    padding-top: 1rem;
     text-decoration: none;
 }
 
@@ -630,6 +641,7 @@ hr{
 .article-author{
     font-size: 12px;
     display: block;
+    margin-top: .3rem;
 }
 
 .article-date-pub{
@@ -640,11 +652,12 @@ hr{
 
 /*----------------------------------- ARTICLE LISTS ---------------------------------*/
 .latest-article-area{
-    height: auto;
+    height: max-content;
     padding: 0;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     border: 1px solid #ccc;
+    overflow: hidden;
 }
 
 .latest-article-category{
@@ -711,7 +724,7 @@ hr{
 
 /* --------------------------------- COMMENTING SECTION ----------------------------- */
 .comment{
-    background-color: #efefef;
+    background-color: #f1f1f1;
     border-radius: 1rem;
     padding: .5rem;
     display: flex;
@@ -736,8 +749,17 @@ hr{
 
 .reply-container{
     border-radius: 1rem;
-    background-color: #efefef;
+    background-color: #e6e6e6;
     padding: .5rem;
+    margin-left: 2rem;
+}
+
+
+.reply-container-form{
+    border-radius: 1rem;
+    background-color: #f1f1f1;
+    padding: .5rem;
+    margin: 0;
 }
 
 .commenting_section{
@@ -750,7 +772,6 @@ hr{
 }
 
 .commenting_section:focus{
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
 }
 
 .btn-post{
@@ -1191,6 +1212,7 @@ hr{
     width: 100%;
     height: 70%;
     object-fit: cover;
+    border: 1px solid #f1f1f1;
 }
 
 @media screen and (max-width: 768px) {
@@ -1213,7 +1235,10 @@ hr{
     color: var(--primary);
     margin-top: 1rem;
     margin-bottom: 0;
- 
+}
+
+.link-style:hover .issue-title{
+    text-decoration: underline;
 }
 
 .issue-category, .issue-date-pub{

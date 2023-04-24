@@ -33,7 +33,7 @@ function displayReplyForm(comment_id){
 
     reply_form.innerHTML = `
         <div class="row d-flex flex-column mt-3 font justify-content-end">
-            <div class="col reply-container">
+            <div class="col reply-container-form">
                 <form action="" class="p-1">
                     <input type="text" placeholder="Write a reply..." class="commenting_section" id="reply_input" required>
                     <div class="btn-post">
@@ -134,9 +134,9 @@ function enableEditComment(comment_id){
 
             // check if the icon is an edit button
             const button = document.getElementById(`icon_${comment_id}`);
-            if(button.getAttribute('class') === 'bi bi-pencil-square'){
+            if(button.getAttribute('class') === 'bi bi-pencil-square text-success'){
                 // change edit icon to save icon
-                button.setAttribute('class', 'bi bi-check2-square');
+                button.setAttribute('class', 'bi bi-check2-square text-success');
                 button.setAttribute('title', 'Save');
         
                 // enable message editing
@@ -146,11 +146,11 @@ function enableEditComment(comment_id){
                 input_element.setSelectionRange(input_element.value.length, input_element.value.length);
     
                 // display cancel editing button
-                document.getElementById(`cancel_${comment_id}`).setAttribute('class', 'bi bi-x-square');
+                document.getElementById(`cancel_${comment_id}`).setAttribute('class', 'bi bi-x-square text-danger');
                 // hide delete comment button
-                document.getElementById(`delete_${comment_id}`).setAttribute('class', 'bi bi-trash d-none');
+                document.getElementById(`delete_${comment_id}`).setAttribute('class', 'bi bi-trash text-danger d-none');
             }
-            else if(button.getAttribute('class') === 'bi bi-check2-square'){
+            else if(button.getAttribute('class') === 'bi bi-check2-square text-success'){
                 if (input_element.value.trim() === '') {
                     input_element.reportValidity();
                 }else{
@@ -236,7 +236,7 @@ function editComment(comment_id){
 function cancelEditComment(comment_id){
     const button = document.getElementById(`icon_${comment_id}`);
     // change edit icon to save icon
-    button.setAttribute('class', 'bi bi-pencil-square');
+    button.setAttribute('class', 'bi bi-pencil-square text-success');
     button.setAttribute('title', 'Edit comment');
 
     // enable message editing
@@ -246,9 +246,9 @@ function cancelEditComment(comment_id){
     input_element.disabled = true;
 
     // hide cancel editing button
-    document.getElementById(`cancel_${comment_id}`).setAttribute('class', 'bi bi-x-square d-none');
+    document.getElementById(`cancel_${comment_id}`).setAttribute('class', 'bi bi-x-square text-danger d-none');
     // display delete comment button
-    document.getElementById(`delete_${comment_id}`).setAttribute('class', 'bi bi-trash');
+    document.getElementById(`delete_${comment_id}`).setAttribute('class', 'bi bi-trash text-danger');
 }
 
 function deleteComment(comment_id){

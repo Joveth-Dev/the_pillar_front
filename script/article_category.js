@@ -13,13 +13,14 @@ function populateSection(data, category){
     const category_container = document.createElement('div');
     category_container.setAttribute('class', 'category-box');
     category_container.innerHTML = `
-        <div class="category-head">
-            <span class="category-name">${category}</span>
-            <a class="link-style" href="/html-files/listView.html?category=${category.toLowerCase()}"><span class="category-more">MORE > </span></a>
+    <div class="category-head">
+    <span class="category-name">${category}</span>
+    <a class="link-style" href="/html-files/listView.html?category=${category.toLowerCase()}"><span class="category-more">MORE > </span></a>
         </div>
     `;
 
     // loop through the items in the data and populate category div
+    const no_img_ul = document.createElement('ul');
     for (const item of data){
         // set date published
         let date_object = new Date(item.date_published);
@@ -75,8 +76,7 @@ function populateSection(data, category){
                 </a>
             `;
         }else{
-            const no_img_ul = document.createElement('ul');
-            no_img_ul.setAttribute('class', 'artile-list');
+            no_img_ul.setAttribute('class', 'article-list');
             no_img_ul.innerHTML += `
                 <a class="link-style" href="html-files/readView.html" onclick="sessionStorage.setItem('article_id', ${item.id})">
                     <li>

@@ -1,5 +1,28 @@
 import { getData } from './api_fetch.js';
 
+// ------------- ENABLE SEARCH BUTTON WHEN INPUT HAS VALUE -------------
+const search_input = document.getElementById('search_input');
+const search_button = document.getElementById('search_button');
+const search_input_mobile = document.getElementById('search_input_mobile');
+const search_button_mobile = document.getElementById('search_button_mobile');
+
+search_input.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button.disabled = false;
+    }else {
+        search_button.disabled = true;
+    }
+});
+
+search_input_mobile.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button_mobile.disabled = false;
+    }else {
+        search_button_mobile.disabled = true;
+    }
+});
+// ---------------------------------------------------------------------
+
 window.onload = function () {
     displayIssues(issues_api);
 }

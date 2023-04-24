@@ -1,5 +1,30 @@
 import { getData } from './api_fetch.js';
 
+
+
+// ------------- ENABLE SEARCH BUTTON WHEN INPUT HAS VALUE -------------
+const search_input = document.getElementById('search_input');
+const search_button = document.getElementById('search_button');
+const search_input_mobile = document.getElementById('search_input_mobile');
+const search_button_mobile = document.getElementById('search_button_mobile');
+
+search_input.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button.disabled = false;
+    }else {
+        search_button.disabled = true;
+    }
+});
+
+search_input_mobile.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button_mobile.disabled = false;
+    }else {
+        search_button_mobile.disabled = true;
+    }
+});
+// ---------------------------------------------------------------------
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const category = urlParams.get('category').toUpperCase();
@@ -117,7 +142,7 @@ getData(category_api)
                 }
 
                 article_category_container.innerHTML += `
-                    <a href="readView.html" class="col catergory-article link-style" onclick="sessionStorage.setItem('article_id', ${article.id}), sessionStorage.removeItem('update_id')">
+                    <a href="readView.html" class="col catergory-articles link-style" onclick="sessionStorage.setItem('article_id', ${article.id}), sessionStorage.removeItem('update_id')">
                         <div class="category-article-img">
                             <img src="${article_image}" alt="Article image">
                         </div>
@@ -150,7 +175,7 @@ getData(articles_api)
     for(const article of data){
         latest_articles_container.innerHTML += `
             <a href="readView.html" class="link-style" onclick="sessionStorage.setItem('article_id', ${article.id}), sessionStorage.removeItem('update_id')">
-                <li class="latest_article_item">${article.title_or_headline}
+                <li class="latest-article-item">${article.title_or_headline}
                     <br>
                     <span class="published-date">${article.date_published}</span>
                 </li>

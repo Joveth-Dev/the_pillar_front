@@ -28,9 +28,9 @@ function enableEditReply(reply_id){
 
             // check if the icon is an edit button
             const button = document.getElementById(`reply_icon_${reply_id}`);
-            if(button.getAttribute('class') === 'bi bi-pencil-square'){
+            if(button.getAttribute('class') === 'bi bi-pencil-square text-success'){
                 // change edit icon to save icon
-                button.setAttribute('class', 'bi bi-check2-square');
+                button.setAttribute('class', 'bi bi-check2-square text-success');
                 button.setAttribute('title', 'Save');
         
                 // enable message editing
@@ -44,7 +44,7 @@ function enableEditReply(reply_id){
                 // hide delete comment button
                 document.getElementById(`delete_reply_${reply_id}`).setAttribute('class', 'bi bi-trash d-none');
             }
-            else if(button.getAttribute('class') === 'bi bi-check2-square'){
+            else if(button.getAttribute('class') === 'bi bi-check2-square text-success'){
                 if (input_element.value.trim() === '') {
                     input_element.reportValidity();
                 }else{
@@ -130,7 +130,7 @@ function editReply(reply_id){
 function cancelEditReply(reply_id){
     const button = document.getElementById(`reply_icon_${reply_id}`);
     // change edit icon to save icon
-    button.setAttribute('class', 'bi bi-pencil-square');
+    button.setAttribute('class', 'bi bi-pencil-square text-success');
     button.setAttribute('title', 'Edit comment');
 
     // enable message editing

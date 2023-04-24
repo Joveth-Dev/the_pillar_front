@@ -4,12 +4,22 @@ import { ArticleCategory } from './article_category.js';
 // ------------- ENABLE SEARCH BUTTON WHEN INPUT HAS VALUE -------------
 const search_input = document.getElementById('search_input');
 const search_button = document.getElementById('search_button');
+const search_input_mobile = document.getElementById('search_input_mobile');
+const search_button_mobile = document.getElementById('search_button_mobile');
 
 search_input.addEventListener('input', function(){
     if(this.value.trim().length > 0){
         search_button.disabled = false;
     }else {
         search_button.disabled = true;
+    }
+});
+
+search_input_mobile.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button_mobile.disabled = false;
+    }else {
+        search_button_mobile.disabled = true;
     }
 });
 // ---------------------------------------------------------------------
@@ -101,12 +111,16 @@ getData(updates_api)
 .then(data => {
     for(const item of data){
         const update_container = document.getElementById('updates_container');
+        let title = item.title;
         let date_object = new Date(item.date_posted);
         const date_string = date_object.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+        if(item.title === null){
+            title = item.description.slice(0, 30).trimRight() + '...';
+        }
         update_container.innerHTML += `
             <a href="/html-files/readView.html" onclick="sessionStorage.setItem('update_id', ${item.id}), sessionStorage.removeItem('article_id')">                  
                 <div>
-                    ${item.title}
+                    ${title}
                     <br>
                     <span class="published-date">${date_string}</span>
                 </div>
@@ -129,7 +143,7 @@ getData(issues_api)
         const date_string = date_object.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
         
         issues_container.innerHTML += `
-            <a href="html-files/archiveRead.html" onclick="sessionStorage.setItem('issue_id', ${item.id})">                 
+            <a href="html-files/archiveRead.html" onclick="sessionStorage.setItem('issue_id', ${item.id}), sessionStorage.setItem('issue_file', '${item.issue_file.file}')">                 
                 <div>
                     VOL. ${item.volume_number} | ISSUE : ${item.issue_number}
                     <br>

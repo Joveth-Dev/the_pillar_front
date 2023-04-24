@@ -1,5 +1,28 @@
 import { getData, setData } from './api_fetch.js';
 
+// ------------- ENABLE SEARCH BUTTON WHEN INPUT HAS VALUE -------------
+const search_input = document.getElementById('search_input');
+const search_button = document.getElementById('search_button');
+const search_input_mobile = document.getElementById('search_input_mobile');
+const search_button_mobile = document.getElementById('search_button_mobile');
+
+search_input.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button.disabled = false;
+    }else {
+        search_button.disabled = true;
+    }
+});
+
+search_input_mobile.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button_mobile.disabled = false;
+    }else {
+        search_button_mobile.disabled = true;
+    }
+});
+// ---------------------------------------------------------------------
+
 window.onload = function () {
     displayLikes();
     displayComments();
@@ -93,13 +116,15 @@ if (article_id) {
                 // if paragraphs are more than the article_images
                 if (paragraphs.length >= article_images.length) {
                     for (const [index, article_image] of article_images.entries()) {
+                        let image_caption = article_image.image_caption;
+                        if(image_caption === null) image_caption = '';
                         article_body.innerHTML += `
-                    <p class="article-body m-auto">${paragraphs[index]}</p>
-                    <div class="article-img">
+                        <p class="article-body m-auto">${paragraphs[index]}</p>
+                        <div class="article-img">
                             <img src="${article_image.image}" alt="Article image">
-                            <p class="image-caption font">${article_image.image_caption}</p>
-                            </div>
-                            `;
+                            <p class="image-caption font">${image_caption}</p>
+                        </div>
+                        `;
                         paragraphs.splice(index, 1);
                     }
                     for (const paragraph of paragraphs) {
@@ -111,22 +136,26 @@ if (article_id) {
                 // if article_images are more that paragraphs
                 else {
                     for (const [index, paragraph] of paragraphs.entries()) {
+                        let image_caption = article_images[index].image_caption;
+                        if(image_caption === null) image_caption = '';
                         article_body.innerHTML += `
                         <p class="article-body">${paragraph}</p>
                         <div class="article-img">
                             <img src="${article_images[index].image}" alt="Article image">
-                            <p class="image-caption font">${article_images[index].image_caption}</p>
+                            <p class="image-caption font">${image_caption}</p>
                         </div>
                     `;
                         article_images.splice(index, 1);
                     }
                     for (const article_image of article_images) {
+                        let image_caption = article_image.image_caption;
+                        if(image_caption === null) image_caption = '';
                         article_body.innerHTML += `
-                    <div class="article-img">
-                        <img src="${article_image.image}" alt="Article image">
-                        <p class="image-caption font">${article_image.image_caption}</p>
-                    </div>
-                    `;
+                            <div class="article-img">
+                                <img src="${article_image.image}" alt="Article image">
+                                <p class="image-caption font">${image_caption}</p>
+                            </div>
+                        `;
                     }
                 }
             } else {
@@ -159,14 +188,15 @@ if (article_id) {
                 if (category == 'LITERARY') {
                     article_default_image = '/img/default_article_imgs/default_literary.png';
                 }
-
+                    article_body.innerHTML += `
+                        <div class="article-img">
+                            <img src="${article_default_image}" alt="Article image">
+                        </div>
+                    `;
                 for (const paragraph of paragraphs) {
                     article_body.innerHTML += `
-                    <div class="article-img">
-                        <img src="${article_default_image}" alt="Article image">
-                    </div>
-                    <p class="article-body">${paragraph}</p>
-                `;
+                        <p class="article-body">${paragraph}</p>
+                    `;
                 }
             }
         })
@@ -269,7 +299,7 @@ function displayLikes() {
                     // display likes count of the article
                     const likes_count_element = document.getElementById('nummberOfLikesArticles');
                     const likes_count = data.filter(obj => obj.is_liked === true).length;
-                    likes_count_element.textContent = likes_count;
+                    likes_count_element.textContent = `${likes_count} likes`;
 
                     const user_id = sessionStorage.getItem('user_id');
                     if (user_id) {
@@ -597,9 +627,9 @@ function displayComments(comment_api = null) {
                                     <div class="d-flex justify-content-between">
                                         <small class="fw-bold text-primary font">${comment.user.full_name}</small>
                                         <span type="button" class="text-primary edit-comment pe-2">
-                                            <i class="bi bi-pencil-square" onclick="enableEditComment(${comment.id})" id="icon_${comment.id}" title="Edit comment"></i>
-                                            <i class="bi bi-x-square d-none" onclick="cancelEditComment(${comment.id})" id="cancel_${comment.id}" title="Cancel editing comment"></i>
-                                            <i type="button" class="bi bi-trash" onclick="confirmDeleteCommentModal(${comment.id})" id="delete_${comment.id}" title="Delete comment"></i>
+                                            <i class="bi bi-pencil-square text-success" onclick="enableEditComment(${comment.id})" id="icon_${comment.id}" title="Edit comment"></i>
+                                            <i class="bi bi-x-square text-danger d-none" onclick="cancelEditComment(${comment.id})" id="cancel_${comment.id}" title="Cancel editing comment"></i>
+                                            <i type="button" class="bi bi-trash text-danger" onclick="confirmDeleteCommentModal(${comment.id})" id="delete_${comment.id}" title="Delete comment"></i>
                                         </span>
                                     </div>
                                     <input class="posted-comment" value="${message}" id="message_${comment.id}" disabled required></input>
@@ -616,9 +646,11 @@ function displayComments(comment_api = null) {
                                     <div class="d-flex justify-content-between">
                                         <small class="fw-bold text-primary font">${comment.user.full_name}</small>
                                     </div>
-                                        <p class="posted-comment">${message}</p>
+                                    <p class="posted-comment">${message}</p>
+                                    <div class="d-flex align-items-center">
                                         <span class="ps-5 m-0 reply-btn fw-bold" onclick="displayReplyForm(${comment.id})">Reply</span>
-                                    <span class="date-comment">${comment.comment_date}</span>
+                                        <span class="date-comment">${comment.comment_date}</span>
+                                    </div>
                                 </div>
                                 <div class="d-none" id="comment_${comment.id}"></div>
                             `;
@@ -632,9 +664,9 @@ function displayComments(comment_api = null) {
                                     <div class="reply-container">
                                         <span class="fw-bold text-primary font text-center">${reply.user.full_name}</span>
                                         <span class="reply-to-comment-name">replied to <span class="fw-bold text-primary">${comment.user.full_name}</span>
-                                        <i class="bi bi-pencil-square" onclick="enableEditReply(${reply.id})" id="reply_icon_${reply.id}" title="Edit reply"></i>
+                                        <i class="bi bi-pencil-square text-success" onclick="enableEditReply(${reply.id})" id="reply_icon_${reply.id}" title="Edit reply"></i>
                                         <i class="bi bi-x-square d-none" onclick="cancelEditReply(${reply.id})" id="cancel_reply_${reply.id}" title="Cancel editing reply"></i>
-                                        <i type="button" class="bi bi-trash" onclick="confirmDeleteReplyModal(${reply.id})" id="delete_reply_${reply.id}" title="Delete reply"></i>
+                                        <i type="button" class="bi bi-trash text-danger" onclick="confirmDeleteReplyModal(${reply.id})" id="delete_reply_${reply.id}" title="Delete reply"></i>
     
                                         <input class="reply-to-comment m-0" value="${reply_message}" id="reply_message_${reply.id}" disabled required></input>
                                         <span class="date-comment">${reply.reply_date}</span>

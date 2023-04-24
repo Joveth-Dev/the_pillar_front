@@ -1,5 +1,28 @@
 import { getData, setData } from './api_fetch.js';
 
+// ------------- ENABLE SEARCH BUTTON WHEN INPUT HAS VALUE -------------
+const search_input = document.getElementById('search_input');
+const search_button = document.getElementById('search_button');
+const search_input_mobile = document.getElementById('search_input_mobile');
+const search_button_mobile = document.getElementById('search_button_mobile');
+
+search_input.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button.disabled = false;
+    }else {
+        search_button.disabled = true;
+    }
+});
+
+search_input_mobile.addEventListener('input', function(){
+    if(this.value.trim().length > 0){
+        search_button_mobile.disabled = false;
+    }else {
+        search_button_mobile.disabled = true;
+    }
+});
+// ---------------------------------------------------------------------
+
 // prevent page from scrolling up when closing modal
 const modal = document.getElementById('modal-btn');
 const closeButton = document.getElementById('close_modal');
@@ -71,7 +94,7 @@ function displayLikes() {
                     // display likes count of the article
                     const likes_count_element = document.getElementById('nummberOfLikesArticles');
                     const likes_count = data.filter(obj => obj.is_liked === true).length;
-                    likes_count_element.textContent = likes_count;
+                    likes_count_element.textContent = `${likes_count} likes`;
 
                     const user_id = sessionStorage.getItem('user_id');
                     if (user_id) {

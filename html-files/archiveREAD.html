@@ -103,9 +103,9 @@
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <form class="d-flex" role="search" id="searchField1">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary " type="submit">Go</button>
+                  <form class="d-flex" role="search" id="searchFieldMobile" action="searchresult.html">
+                    <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" id="search_input_mobile">
+                    <button class="btn btn-outline-primary" type="submit" id="search_button_mobile" disabled>Go</button>
                   </form>
 
                   <ul class="row row-cols-2 nav-list offcanvas-navlist">
@@ -217,8 +217,8 @@
             <span class="h5 text-primary">Did you like this issue?</span>
           </div>
           <div class="col-4 col-sm-6 d-flex flex-row justify-content-end align-items-center">
-            <i class="bi bi-hand-thumbs-up text-secondary cursor" id="thumbs_up"></i>
             <span id="nummberOfLikesArticles"></span>
+            <i class="bi bi-hand-thumbs-up text-secondary cursor" id="thumbs_up"></i>
             <i class="bi bi-hand-thumbs-down text-secondary cursor" id="thumbs_down"></i>
           </div>
 

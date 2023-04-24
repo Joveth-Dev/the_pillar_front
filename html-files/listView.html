@@ -49,11 +49,11 @@
 
 
         <!-- Modal -->
-        <div class="modal fade glassmorphism" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade glassmorphism" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close_modal"></button>
               </div>
               <div class="modal-body">
                
@@ -85,16 +85,13 @@
             
                   <button class="btn btn-outline-primary col-12 fw-bold" type="button" id="login_button" disabled>LOG IN</button>
                   <h6 class="mt-2 mb-4 text-center"> <a href="/html-files/forgotpass.html" class="text-decoration-none">Forgot Password?</a></h6>
-            
                   <a class="btn btn-outline-secondary col-12 fw-bold" href="/html-files/signup.html">SIGN UP</a>
                 </form>
-                  
               </div>
-      
             </div>
           </div>
         </div>
-      <!--end of Modal-->
+        <!--end of Modal-->
 
         <!-- Offcanvas Menu | shown if the menu button is seen when going to lower size screen -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -103,10 +100,11 @@
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <form class="d-flex" role="search" id="searchField2">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary " type="submit">Go</button>
-                  </form>
+
+                <form class="d-flex" role="search" id="searchFieldMobile" action="searchresult.html">
+                  <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" id="search_input_mobile">
+                  <button class="btn btn-outline-primary" type="submit" id="search_button_mobile" disabled>Go</button>
+                </form>
 
                   <ul class="row row-cols-2 nav-list offcanvas-navlist">
                     <a href="listView.html?category=editorial" id="editorial">Editorial</a>
@@ -205,7 +203,7 @@
                   </div>
                 </div>
             <div class="col latest-article-area">
-              <h4 class="banner-update">LATEST ARTICLE</h4>
+              <h4 class="banner-update">LATEST ARTICLES</h4>
               <div class="container-inner">
                 <div class="latest-article-container">
                   <!-- <small class="latest-article-category font">NEWS</small> -->
