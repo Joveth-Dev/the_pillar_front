@@ -85,6 +85,13 @@ if (article_id) {
             article_title.textContent = data.title_or_headline;
 
             // display authors
+            if(data.authors.length === 0 && data.contributors.length === 0){
+                author_container.innerHTML += `
+                    <div class="author">
+                        <small class="fw-bold text-primary">The Pillar</small>
+                    </div>
+                `;
+            }
             if (data.authors.length !== 0) {
                 for (const author of data.authors) {
                     author_container.innerHTML += `
@@ -216,10 +223,10 @@ else if (update_id) {
 
             // displaying author  
             author_container.innerHTML += `
-            <div class="author">
-                <small class="fw-bold text-primary">The Pillar</small>
-            </div>
-        `;
+                <div class="author">
+                    <small class="fw-bold text-primary">The Pillar</small>
+                </div>
+            `;
 
             // displaying body and update image
             if (data.image && data.image_caption) {
@@ -285,7 +292,7 @@ let likes_api = '';
 if (article_id) {
     likes_api = `http://127.0.0.1:8000/reaction/likes/?object_id=${article_id}&content_type=8`;
 } else {
-    likes_api = `http://127.0.0.1:8000/reaction/likes/?object_id=${update_id}&content_type=13`;
+    likes_api = `http://127.0.0.1:8000/reaction/likes/?object_id=${update_id}&content_type=18`;
 }
 
 function displayLikes() {
@@ -418,7 +425,7 @@ function likeArticle(is_liked, object_id) {
     if (article_id) {
         content_type = 8
     } else {
-        content_type = 13;
+        content_type = 18;
     }
     try {
         const access = sessionStorage.getItem('access');
@@ -665,7 +672,7 @@ function displayComments(comment_api = null) {
                                         <span class="fw-bold text-primary font text-center">${reply.user.full_name}</span>
                                         <span class="reply-to-comment-name">replied to <span class="fw-bold text-primary">${comment.user.full_name}</span>
                                         <i class="bi bi-pencil-square text-success" onclick="enableEditReply(${reply.id})" id="reply_icon_${reply.id}" title="Edit reply"></i>
-                                        <i class="bi bi-x-square d-none" onclick="cancelEditReply(${reply.id})" id="cancel_reply_${reply.id}" title="Cancel editing reply"></i>
+                                        <i class="bi bi-x-square text-danger d-none" onclick="cancelEditReply(${reply.id})" id="cancel_reply_${reply.id}" title="Cancel editing reply"></i>
                                         <i type="button" class="bi bi-trash text-danger" onclick="confirmDeleteReplyModal(${reply.id})" id="delete_reply_${reply.id}" title="Delete reply"></i>
     
                                         <input class="reply-to-comment m-0" value="${reply_message}" id="reply_message_${reply.id}" disabled required></input>
@@ -679,7 +686,7 @@ function displayComments(comment_api = null) {
                                     <div class="reply-container">
                                         <span class="fw-bold text-primary font text-center">${reply.user.full_name}</span>
                                         <span class="reply-to-comment-name">replied to <span class="fw-bold text-primary">${comment.user.full_name}</span>
-                                        <p class="reply-to-comment m-0">${reply_message}</p>
+                                        <input class="reply-to-comment m-0" value="${reply_message}" disabled></input>
                                         <span class="date-comment">${reply.reply_date}</span>
                                     </div>
                                 </div>
@@ -735,7 +742,7 @@ function postComment(object_id) {
     if (article_id) {
         content_type = 8;
     } else {
-        content_type = 13;
+        content_type = 18;
     }
     // post comment
     try {

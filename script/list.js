@@ -93,10 +93,13 @@ if(category === 'LITERARY'){
 
 getData(category_api)
 .then(data => {
-    if(data.error){
+    if(data.length === 0){
+        document.getElementById('article_hightlight_container').innerHTML = 'No articles with this category yet.';
+    }else if(data.error){
         console.log(data.error);
         console.log(data.data);
     }else{
+        console.log(data);
         for(const article of data){
             if(article.is_highlight){
                 // display highlight image

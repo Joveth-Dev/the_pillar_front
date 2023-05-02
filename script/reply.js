@@ -40,9 +40,9 @@ function enableEditReply(reply_id){
                 input_element.setSelectionRange(input_element.value.length, input_element.value.length);
     
                 // display cancel editing button
-                document.getElementById(`cancel_reply_${reply_id}`).setAttribute('class', 'bi bi-x-square');
+                document.getElementById(`cancel_reply_${reply_id}`).setAttribute('class', 'bi bi-x-square text-danger');
                 // hide delete comment button
-                document.getElementById(`delete_reply_${reply_id}`).setAttribute('class', 'bi bi-trash d-none');
+                document.getElementById(`delete_reply_${reply_id}`).setAttribute('class', 'bi bi-trash text-danger d-none');
             }
             else if(button.getAttribute('class') === 'bi bi-check2-square text-success'){
                 if (input_element.value.trim() === '') {
@@ -140,9 +140,9 @@ function cancelEditReply(reply_id){
     input_element.disabled = true;
 
     // hide cancel editing button
-    document.getElementById(`cancel_reply_${reply_id}`).setAttribute('class', 'bi bi-x-square d-none');
+    document.getElementById(`cancel_reply_${reply_id}`).setAttribute('class', 'bi bi-x-square text-danger d-none');
     // display delete comment button
-    document.getElementById(`delete_reply_${reply_id}`).setAttribute('class', 'bi bi-trash');
+    document.getElementById(`delete_reply_${reply_id}`).setAttribute('class', 'bi bi-trash text-danger');
 }
 
 function deleteReply(reply_id){
